@@ -5,7 +5,7 @@ import { postCardPropsMock } from './mock'
 
 const props = postCardPropsMock
 
-describe('<PostCard 7>', () => {
+describe('<PostCard />', () => {
   it('should render a PostCard correctly', () => {
     render(<PostCard {...props} />)
 

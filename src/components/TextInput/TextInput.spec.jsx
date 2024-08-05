@@ -1,8 +1,8 @@
 /* eslint-disable testing-library/no-node-access */
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { TextInput } from '.'
-import userEvent from '@testing-library/user-event'
 
 describe('<TextInput />', () => {
   it('should have a value of searchValue', () => {
@@ -18,7 +18,7 @@ describe('<TextInput />', () => {
   it('should call handleChange function on each key press', () => {
     const fn = jest.fn()
 
-    render(<TextInput actionFn={fn} />)
+    render(<TextInput actionFn={fn} searchValue="" />)
 
     const input = screen.getByPlaceholderText(/Search posts/i)
     const value = 'Search'
